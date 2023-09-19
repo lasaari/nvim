@@ -95,6 +95,7 @@ return packer.startup(function(use)
   -- DB
   use "tpope/vim-dadbod"
   use "kristijanhusak/vim-dadbod-ui"
+  use "kristijanhusak/vim-dadbod-completion"
 
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
