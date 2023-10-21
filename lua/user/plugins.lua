@@ -82,6 +82,8 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim' -- Automatically set up your configuration after cloning packer.nvim
+  -- Ai
+  use 'David-Kunz/gen.nvim'
   
   -- Treesitter
   use "nvim-treesitter/nvim-treesitter"

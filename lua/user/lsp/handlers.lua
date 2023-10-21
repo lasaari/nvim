@@ -140,7 +140,22 @@ lspconfig.clangd.setup {
         ) }
 
 lspconfig.pyright.setup {
-
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = {"python"},
+    settings = {
+      pyright = {
+        autoImportCompletion = true,
+      },
+      python = {
+        analysis = {
+          autoSearchPaths = true,
+          diagnosticMode = 'openFilesOnly',
+          useLibraryCodeForTypes = true,
+          typeCheckingMode = 'on'
+        }
+      }
+    }
 }
 -- local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 -- if status_ok then
