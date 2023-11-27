@@ -72,6 +72,7 @@ lspconfig.pyright.setup {
       }
     }
 }
+lspconfig.dockerls.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
