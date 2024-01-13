@@ -97,19 +97,19 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lspconfig = require('lspconfig')
 local util = require "lspconfig/util"
 
-lspconfig.emmet_ls.setup({
-    -- on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'javascript', 'sass', 'scss', 'less' },
-    init_options = {
-      html = {
-        options = {
-          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-          ["bem.enabled"] = true,
-        },
-      },
-    }
-})
+-- lspconfig.emmet_ls.setup({
+--     -- on_attach = on_attach,
+--     capabilities = capabilities,
+--     filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'javascript', 'sass', 'scss', 'less' },
+--     init_options = {
+--       html = {
+--         options = {
+--           -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+--           ["bem.enabled"] = true,
+--         },
+--       },
+--     }
+-- })
 
 lspconfig.gopls.setup {
     cmd = {"gopls"},
@@ -157,6 +157,7 @@ lspconfig.pyright.setup {
       }
     }
 }
+lspconfig.tsserver.setup{}
 -- local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 -- if status_ok then
 --   M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)

@@ -12,19 +12,19 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lspconfig = require('lspconfig')
 local util = require "lspconfig/util"
 
-lspconfig.emmet_ls.setup({
-    -- on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'javascript', 'sass', 'scss', 'less' },
-    init_options = {
-      html = {
-        options = {
-          -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
-          ["bem.enabled"] = true,
-        },
-      },
-    }
-})
+-- lspconfig.emmet_ls.setup({
+--     -- on_attach = on_attach,
+--     capabilities = capabilities,
+--     filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'javascript', 'sass', 'scss', 'less' },
+--     init_options = {
+--       html = {
+--         options = {
+--           -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+--           ["bem.enabled"] = true,
+--         },
+--       },
+--     }
+-- })
 
 lspconfig.gopls.setup {
     cmd = {"gopls"},
@@ -39,6 +39,8 @@ lspconfig.gopls.setup {
         staticcheck = true,
       },
     },
+  }
+lspconfig.terraformls.setup {
   }
 
 lspconfig.clangd.setup {
@@ -73,6 +75,9 @@ lspconfig.pyright.setup {
     }
 }
 lspconfig.dockerls.setup{}
+
+lspconfig.tsserver.setup{}
+lspconfig.svelte.setup{}
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
