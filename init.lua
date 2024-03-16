@@ -14,4 +14,5 @@ require "user.bufferline"
 require "user.neovide"
 require "user.lualine"
 require "user.toggleterm"
+require "user.gen"
 

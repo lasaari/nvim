@@ -92,6 +92,9 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use 'tpope/vim-fugitive'
 
+  -- Ai
+  use "David-Kunz/gen.nvim"
+
   -- DB
   use "tpope/vim-dadbod"
   use "kristijanhusak/vim-dadbod-ui"
