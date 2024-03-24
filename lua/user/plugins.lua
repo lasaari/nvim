@@ -93,7 +93,10 @@ return packer.startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- Ai
-  use "David-Kunz/gen.nvim"
+  --  use "David-Kunz/gen.nvim"
+  use "jackMort/ChatGPT.nvim"
+  use "MunifTanjim/nui.nvim"
+  use "folke/trouble.nvim"
 
   -- DB
   use "tpope/vim-dadbod"
