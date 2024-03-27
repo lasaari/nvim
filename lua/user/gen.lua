@@ -25,7 +25,7 @@ if not status_ok then
 end
 
 gpt.setup ({
-        api_host_cmd = "echo http://10.0.0.13:11434",
+        api_host_cmd = "echo http://10.0.0.180:11434",
         api_key_cmd = "echo ''",
         openai_params = {
           model = "codellama:13b",
